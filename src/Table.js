@@ -1,3 +1,8 @@
+//Creado por: Mauro Clavijo
+//Fecha: 19/07/2021
+
+//Aqui se está creando la tabla que ocuparemos como template para pasarle los datos obtenidos de la api
+
 import React from 'react';
 
 const Table = ({ details }) => {

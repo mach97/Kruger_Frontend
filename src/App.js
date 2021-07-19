@@ -1,3 +1,6 @@
+//Creado por: Mauro Clavijo
+//Fecha: 19/07/2021
+
 import React, { Component } from 'react';
 import Table from './Table.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,9 +16,13 @@ class App extends Component {
       }
   }
 
+  //Aqui vamos a actualizar el valor del id_order de acuerdo a lo que sea input del usuario
+
   handleChange = (e) => {
   this.setState({ id_order: e.target.value });  // This will update the input value in state
   }
+
+  //Esta funcion realiza la petición cada que se haga un submit al boton de buscar
 
   doingASearch=(event)=>{
     event.preventDefault();
@@ -30,6 +37,8 @@ class App extends Component {
 
 
 
+  //Aqui se renderiza la pagina
+
   render() {
     return (
         <div className="App">
@@ -42,7 +51,7 @@ class App extends Component {
             <label htmlFor="searchTerm">
               <strong>Id de Orden </strong>
               <input type="text" name="id_order" onChange={this.handleChange}/>
-              <button type="submit" class="btn btn-light">Buscar</button>
+              <button style={{ margin: "1em" }} type="submit" class="btn btn-light">Buscar</button>
             </label>
           </form>
           <Container style={{ margin: "1em" }}>
